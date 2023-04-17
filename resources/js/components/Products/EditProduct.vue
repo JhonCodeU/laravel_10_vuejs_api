@@ -1,22 +1,24 @@
 <template>
-    <div>
-        <h3 class="text-center">Edit Product</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <form @submit.prevent="updateProduct">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" v-model="product.name">
-                    </div>
-                    <div class="form-group">
-                        <label>Detail</label>
-                        <input type="text" class="form-control" v-model="product.detail">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Update</button>
-                </form>
+  <div class="mx-auto max-w-xl">
+    <h3 class="text-center">Edit Product</h3>
+    <div class="mt-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <form @submit.prevent="updateProduct">
+            <div class="mb-4">
+              <label class="block mb-2">Name</label>
+              <input type="text" class="w-full p-2 rounded border-gray-300" v-model="product.name">
             </div>
+            <div class="mb-4">
+              <label class="block mb-2">Detail</label>
+              <input type="text" class="w-full p-2 rounded border-gray-300" v-model="product.detail">
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Update</button>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
