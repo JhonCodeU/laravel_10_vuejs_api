@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::get('/dasboard', function () {
-    return view('dashboard');
-});
+Route::resource('/tasks', TaskController::class);
