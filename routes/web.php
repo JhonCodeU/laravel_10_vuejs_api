@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('app');
+    return view('welcome');
+});
+
+Route::get('/products', function () {
+    return view('layouts.app');
 });
 
 Route::resource('/tasks', TaskController::class);
