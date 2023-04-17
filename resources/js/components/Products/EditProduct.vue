@@ -1,25 +1,57 @@
 <template>
-  <div class="mx-auto max-w-xl">
+  <div class="flex flex-col items-center">
     <h3 class="text-center">Edit Product</h3>
-    <div class="mt-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <form @submit.prevent="updateProduct">
-            <div class="mb-4">
-              <label class="block mb-2">Name</label>
-              <input type="text" class="w-full p-2 rounded border-gray-300" v-model="product.name">
-            </div>
-            <div class="mb-4">
-              <label class="block mb-2">Detail</label>
-              <input type="text" class="w-full p-2 rounded border-gray-300" v-model="product.detail">
-            </div>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Update</button>
-          </form>
+    <div class="w-full max-w-md">
+      <form @submit.prevent="updateProduct" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="name">
+            Name
+          </label>
+          <input
+            v-model="product.name"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name"
+            type="text"
+            placeholder="Name"
+          />
         </div>
-      </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="detail">
+            Detail
+          </label>
+          <input
+            v-model="product.detail"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="detail"
+            type="text"
+            placeholder="Detail"
+          />
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="price">
+                Price
+            </label>
+            <input
+                v-model="product.price"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="price"
+                type="number"
+                placeholder="Price"
+            />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Update
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
+
 
 <script>
     export default {

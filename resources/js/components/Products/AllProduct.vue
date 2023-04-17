@@ -10,6 +10,7 @@
           <th class="px-6 py-3 bg-gray-200 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider border-b border-gray-300">ID</th>
           <th class="px-6 py-3 bg-gray-200 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider border-b border-gray-300">Name</th>
           <th class="px-6 py-3 bg-gray-200 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider border-b border-gray-300">Detail</th>
+            <th class="px-6 py-3 bg-gray-200 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider border-b border-gray-300">Price</th>
           <th class="px-6 py-3 bg-gray-200 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider border-b border-gray-300">Actions</th>
         </tr>
       </thead>
@@ -18,6 +19,7 @@
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">{{ product.id }}</td>
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">{{ product.name }}</td>
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">{{ product.detail }}</td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">{{ product.price }}</td>
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
             <div role="group">
               <router-link class="text-blue-600 hover:underline" :to="{name: 'edit', params: { id: product.id }}">Edit</router-link>

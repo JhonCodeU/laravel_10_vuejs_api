@@ -27,6 +27,18 @@
             placeholder="Detail"
           />
         </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="price">
+                Price
+            </label>
+            <input
+                v-model="product.price"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="price"
+                type="number"
+                placeholder="Price"
+            />
+        </div>
         <div class="flex items-center justify-between">
           <button
             type="submit"

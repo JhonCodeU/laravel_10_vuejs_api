@@ -1,21 +1,7 @@
-import AllProduct from './components/Products/AllProduct.vue';
-import CreateProduct from './components/Products/CreateProduct.vue';
-import EditProduct from './components/Products/EditProduct.vue';
+import productRoutes from "./routes/product.routes";
+import taskRoutes from "./routes/task.routes";
 
 export const routes = [
-    {
-        name: 'home',
-        path: '/',
-        component: AllProduct
-    },
-    {
-        name: 'create',
-        path: '/create',
-        component: CreateProduct
-    },
-    {
-        name: 'edit',
-        path: '/edit/:id',
-        component: EditProduct
-    }
+    ...productRoutes,
+    //...taskRoutes
 ];
